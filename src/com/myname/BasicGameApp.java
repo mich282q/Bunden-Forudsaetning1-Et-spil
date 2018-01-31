@@ -13,10 +13,12 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import java.util.Map;
+import java.util.Random;
 
 public class BasicGameApp extends GameApplication {
 
 
+    
     //størelsen på boksen
     @Override
     protected void initSettings(GameSettings settings) {
@@ -41,95 +43,98 @@ public class BasicGameApp extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
+
+
+
         // de forskellige COIN som er i spillet
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 0)
-                .viewFromNodeWithBBox(new Circle(15, Color.BLUE))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 40)
-                .viewFromNodeWithBBox(new Circle(15, Color.RED))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 80)
-                .viewFromNodeWithBBox(new Circle(15, Color.YELLOW))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 120)
-                .viewFromNodeWithBBox(new Circle(15, Color.GREEN))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 160)
-                .viewFromNodeWithBBox(new Circle(15, Color.BEIGE))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 200)
-                .viewFromNodeWithBBox(new Circle(15, Color.GREEN))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 240)
-                .viewFromNodeWithBBox(new Circle(15, Color.GRAY))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 280)
-                .viewFromNodeWithBBox(new Circle(15, Color.BLUEVIOLET))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 320)
-                .viewFromNodeWithBBox(new Circle(15, Color.PURPLE))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 360)
-                .viewFromNodeWithBBox(new Circle(15, Color.CADETBLUE))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 400)
-                .viewFromNodeWithBBox(new Circle(15, Color.ORANGERED))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 440)
-                .viewFromNodeWithBBox(new Circle(15, Color.BURLYWOOD))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 480)
-                .viewFromNodeWithBBox(new Circle(15, Color.DARKGOLDENROD))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 520)
-                .viewFromNodeWithBBox(new Circle(15, Color.GOLD))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 560)
-                .viewFromNodeWithBBox(new Circle(15, Color.FIREBRICK))
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
     }
@@ -206,7 +211,7 @@ public class BasicGameApp extends GameApplication {
         textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
 
     }
-    
+
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
