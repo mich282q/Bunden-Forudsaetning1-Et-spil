@@ -30,7 +30,7 @@ public class BasicGameApp extends GameApplication {
 
     private Entity player;
 
-    //hvor den blå boks skal være i firkant
+    //hvor player skal være i boksen
     @Override
     protected void initGame() {
         player = Entities.builder()
@@ -41,80 +41,97 @@ public class BasicGameApp extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
+        // de forskellige COIN som er i spillet
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(100, 200)
+                .at(10, 0)
                 .viewFromNodeWithBBox(new Circle(15, Color.BLUE))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(150, 250)
+                .at(10, 40)
                 .viewFromNodeWithBBox(new Circle(15, Color.RED))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(200, 300)
+                .at(10, 80)
                 .viewFromNodeWithBBox(new Circle(15, Color.YELLOW))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(250, 350)
+                .at(10, 120)
                 .viewFromNodeWithBBox(new Circle(15, Color.GREEN))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(300, 400)
+                .at(10, 160)
                 .viewFromNodeWithBBox(new Circle(15, Color.BEIGE))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(350, 450)
+                .at(10, 200)
                 .viewFromNodeWithBBox(new Circle(15, Color.GREEN))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(400, 500)
+                .at(10, 240)
                 .viewFromNodeWithBBox(new Circle(15, Color.GRAY))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(450, 50)
+                .at(10, 280)
                 .viewFromNodeWithBBox(new Circle(15, Color.BLUEVIOLET))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(500, 100)
+                .at(10, 320)
                 .viewFromNodeWithBBox(new Circle(15, Color.PURPLE))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(120, 150)
+                .at(10, 360)
                 .viewFromNodeWithBBox(new Circle(15, Color.CADETBLUE))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(170, 200)
+                .at(10, 400)
                 .viewFromNodeWithBBox(new Circle(15, Color.ORANGERED))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.COIN)
-                .at(220, 150)
-                .viewFromNodeWithBBox(new Circle(15, Color.DARKGREEN))
+                .at(10, 440)
+                .viewFromNodeWithBBox(new Circle(15, Color.BURLYWOOD))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
-
-
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(10, 480)
+                .viewFromNodeWithBBox(new Circle(15, Color.DARKGOLDENROD))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(10, 520)
+                .viewFromNodeWithBBox(new Circle(15, Color.GOLD))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(10, 560)
+                .viewFromNodeWithBBox(new Circle(15, Color.FIREBRICK))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
     }
     @Override
     protected void initPhysics() {
@@ -129,7 +146,7 @@ public class BasicGameApp extends GameApplication {
     }
 
 
-    // at vi kan rykke rundt på den blå boks
+    // at vi kan rykke rundt på den pacman
     @Override
     protected void initInput() {
         Input input = getInput();
@@ -137,34 +154,34 @@ public class BasicGameApp extends GameApplication {
         input.addAction(new UserAction("Move Right") {
             @Override
             protected void onAction() {
-                player.translateX(5); // move right 5 pixels
-                getGameState().increment("pixelsMoved", +5);
+                player.translateX(3); // move right 5 pixels
+                getGameState().increment("pixelsMoved", +3);
             }
         }, KeyCode.D);
         input.addAction(new UserAction("Move Left") {
             @Override
             protected void onAction() {
-                player.translateX(-5); // move left 5 pixels
+                player.translateX(-3); // move left 5 pixels
             }
         }, KeyCode.A);
 
         input.addAction(new UserAction("Move Up") {
             @Override
             protected void onAction() {
-                player.translateY(-5); // move up 5 pixels
+                player.translateY(-3); // move up 5 pixels
             }
         }, KeyCode.W);
 
         input.addAction(new UserAction("Move Down") {
             @Override
             protected void onAction() {
-                player.translateY(5); // move down 5 pixels
+                player.translateY(3); // move down 5 pixels
             }
         }, KeyCode.S);
         input.addAction(new UserAction("Play Sound") {
             @Override
             protected void onActionBegin() {
-                getAudioPlayer().playSound("drop.mp3");
+                getAudioPlayer().playSound("drop.wav");
             }
         }, KeyCode.F);
 
@@ -175,6 +192,7 @@ public class BasicGameApp extends GameApplication {
     @Override
     protected void initUI() {
 
+        //at vi adder vores player til spillet
         Text textPixels = new Text();
         textPixels.setTranslateX(50); // x = 50
         textPixels.setTranslateY(100); // y = 100
@@ -188,7 +206,7 @@ public class BasicGameApp extends GameApplication {
         textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
 
     }
-
+    
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
