@@ -22,6 +22,8 @@ Help from book: Intro to Java Programming, Comprehensive Version, Global Edition
 
 My game is a Tutorials from AlmasB where a i am flowing his step by step and adding some new Feature so i can collect more that one coin
 
+and i change the Images.
+
 Author:
 
 Michael Trans
