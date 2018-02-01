@@ -18,7 +18,7 @@ import java.util.Random;
 public class BasicGameApp extends GameApplication {
 
 
-    
+
     //størelsen på boksen
     @Override
     protected void initSettings(GameSettings settings) {
@@ -46,10 +46,12 @@ public class BasicGameApp extends GameApplication {
 
 
 
-        // de forskellige COIN som er i spillet
+
+            // de forskellige COIN som er i spillet
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 0)
+                //random color on Coins.
                 .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
@@ -137,98 +139,96 @@ public class BasicGameApp extends GameApplication {
                 .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
-    }
-    @Override
-    protected void initPhysics() {
-        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.COIN) {
 
-            // order of types is the same as passed into the constructor
-            @Override
-            protected void onCollisionBegin(Entity player, Entity coin) {
-                coin.removeFromWorld();
-            }
-        });
-    }
+                
+        }
+        @Override
+        protected void initPhysics () {
+            getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.COIN) {
 
-
-    // at vi kan rykke rundt på den pacman
-    @Override
-    protected void initInput() {
-        Input input = getInput();
-
-        input.addAction(new UserAction("Move Right") {
-            @Override
-            protected void onAction() {
-                player.translateX(3); // move right 5 pixels
-                getGameState().increment("pixelsMoved", +3);
-            }
-        }, KeyCode.D);
-        input.addAction(new UserAction("Move Left") {
-            @Override
-            protected void onAction() {
-                player.translateX(-3); // move left 5 pixels
-            }
-        }, KeyCode.A);
-
-        input.addAction(new UserAction("Move Up") {
-            @Override
-            protected void onAction() {
-                player.translateY(-3); // move up 5 pixels
-            }
-        }, KeyCode.W);
-
-        input.addAction(new UserAction("Move Down") {
-            @Override
-            protected void onAction() {
-                player.translateY(3); // move down 5 pixels
-            }
-        }, KeyCode.S);
-        input.addAction(new UserAction("Play Sound") {
-            @Override
-            protected void onActionBegin() {
-                getAudioPlayer().playSound("drop.wav");
-            }
-        }, KeyCode.F);
+                // order of types is the same as passed into the constructor
+                @Override
+                protected void onCollisionBegin(Entity player, Entity coin) {
+                    coin.removeFromWorld();
+                }
+            });
+        }
 
 
-    }
+        // at vi kan rykke rundt på den pacman
+        @Override
+        protected void initInput () {
+            Input input = getInput();
+
+            input.addAction(new UserAction("Move Right") {
+                @Override
+                protected void onAction() {
+                    player.translateX(3); // move right 5 pixels
+                    getGameState().increment("pixelsMoved", +3);
+                }
+            }, KeyCode.D);
+            input.addAction(new UserAction("Move Left") {
+                @Override
+                protected void onAction() {
+                    player.translateX(-3); // move left 5 pixels
+                }
+            }, KeyCode.A);
+
+            input.addAction(new UserAction("Move Up") {
+                @Override
+                protected void onAction() {
+                    player.translateY(-3); // move up 5 pixels
+                }
+            }, KeyCode.W);
+
+            input.addAction(new UserAction("Move Down") {
+                @Override
+                protected void onAction() {
+                    player.translateY(3); // move down 5 pixels
+                }
+            }, KeyCode.S);
+            input.addAction(new UserAction("Play Sound") {
+                @Override
+                protected void onActionBegin() {
+                    getAudioPlayer().playSound("drop.wav");
+                }
+            }, KeyCode.F);
 
 
-    @Override
-    protected void initUI() {
-
-        //at vi adder vores player til spillet
-        Text textPixels = new Text();
-        textPixels.setTranslateX(50); // x = 50
-        textPixels.setTranslateY(100); // y = 100
-
-        //getGameScene().addUINode(textPixels); // add to the scene graph
-        Texture brickTexture = getAssetLoader().loadTexture("brick.png");
-        //brickTexture.setTranslateX(50);
-        //brickTexture.setTranslateY(450);
-
-        //getGameScene().addUINode(brickTexture);
-        textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
-
-    }
+        }
 
 
-    @Override
-    protected void initGameVars(Map<String, Object> vars) {
-        vars.put("pixelsMoved", 0);
+        @Override
+        protected void initUI () {
+
+            //at vi adder vores player til spillet
+            Text textPixels = new Text();
+            textPixels.setTranslateX(50); // x = 50
+            textPixels.setTranslateY(100); // y = 100
+
+            //getGameScene().addUINode(textPixels); // add to the scene graph
+            Texture brickTexture = getAssetLoader().loadTexture("brick.png");
+            //brickTexture.setTranslateX(50);
+            //brickTexture.setTranslateY(450);
+
+            //getGameScene().addUINode(brickTexture);
+            textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
+
+        }
 
 
-    }
+        @Override
+        protected void initGameVars (Map < String, Object > vars){
+            vars.put("pixelsMoved", 0);
 
 
+        }
 
 
-
-    public static void main(String[] args) {
-        launch(args);
-
+        public static void main (String[]args){
+            launch(args);
 
 
-    }
+        }
 
 }
