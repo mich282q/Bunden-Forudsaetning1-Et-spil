@@ -24,6 +24,8 @@ My game is a Tutorials from AlmasB where a i am flowing his step by step and add
 
 and i change the Images.
 
+it Random pick the color off the coin
+
 Author:
 
 Michael Trans
