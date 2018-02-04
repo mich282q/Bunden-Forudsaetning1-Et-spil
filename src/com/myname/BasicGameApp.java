@@ -51,6 +51,7 @@ public class BasicGameApp extends GameApplication {
 
         // de forskellige COIN som er i spillet
 
+
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 0)
@@ -328,6 +329,97 @@ public class BasicGameApp extends GameApplication {
                 .buildAndAttach(getGameWorld());
 
 
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 0)
+                //random color on Coins.
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 40)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 80)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 120)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 160)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 200)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 240)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 280)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 320)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 360)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 400)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 440)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 480)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 520)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+        Entities.builder()
+                .type(EntityType.COIN)
+                .at(130, 560)
+                .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
     }
         @Override
         protected void initPhysics () {
