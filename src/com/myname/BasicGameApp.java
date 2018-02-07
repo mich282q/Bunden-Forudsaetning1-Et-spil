@@ -48,7 +48,7 @@ public class BasicGameApp extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
-Coins.Entities.builder;
+
         // de forskellige COIN som er i spillet
 
 /*
