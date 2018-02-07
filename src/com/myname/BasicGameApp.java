@@ -48,10 +48,10 @@ public class BasicGameApp extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
-
+Coins.Entities.builder;
         // de forskellige COIN som er i spillet
 
-
+/*
         Entities.builder()
                 .type(EntityType.COIN)
                 .at(10, 0)
@@ -420,6 +420,7 @@ public class BasicGameApp extends GameApplication {
                 .viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
+        */
     }
         @Override
         protected void initPhysics () {
