@@ -32,9 +32,9 @@ public class Coin {
 
     /* Noarg constructor, giver standardværdier for mønten */
     public Coin() {
-        entityType = BasicGameApp.EntityType.COIN;
         placeringX = 0;
         placeringY = 0;
+        entityType = BasicGameApp.EntityType.COIN;
         radius = 15;
         color = Color.color(Math.random(), Math.random(), Math.random());
         collidable = true;
@@ -45,6 +45,11 @@ public class Coin {
     public Coin(int placeringX, int placeringY) {
         this.placeringX = placeringX;
         this.placeringY = placeringY;
+        entityType = BasicGameApp.EntityType.COIN;
+        radius = 15;
+        color = Color.color(Math.random(), Math.random(), Math.random());
+        collidable = true;
+        erISpillet = true;
     }
 
     /* Coin metoder: set&get for X,Y, radius og farve */
@@ -81,5 +86,15 @@ public class Coin {
         this.color = color;
     }
 
+    public BasicGameApp.EntityType getEntityType() {
+        return entityType;
+    }
 
+    public Boolean getCollidable() {
+        return collidable;
+    }
+
+    public Boolean getErISpillet() {
+        return erISpillet;
+    }
 }
