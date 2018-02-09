@@ -3,7 +3,8 @@
     <output-path>$PROJECT_DIR$/out/artifacts/BasicGameApp_jar</output-path>
     <root id="archive" name="BasicGameApp.jar">
       <element id="module-output" name="BasicGameApp" />
-      <element id="extracted-dir" path="$USER_HOME$/Documents/fxgl-0.4.1-uber.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Java/fxgl-0.4.1-uber.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Documents/Java/fxgl-0.4.2-uber.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

@@ -84,9 +84,13 @@ public class BasicGameApp extends GameApplication {
                 // opdaterer pointText
                 pointText.setText("Point: " + pointCounter);
 
+
                 // spiller collectcoin.wav når man samler den op
                 getAudioPlayer().playSound("collectcoin.wav");
+
+
             }
+
         });
     }
 
