@@ -19,7 +19,7 @@ public class Coins {
     }
 
 
-    Entities.builder()
+    // Entities.builder()
     public static String getCoins() {
         String debugTekst = "";
         Random random = new Random();
@@ -28,6 +28,11 @@ public class Coins {
             debugTekst = debugTekst + coinCoordinates[i][0] * 40 + "," + coinCoordinates[i][1] * 40;
             System.out.println(debugTekst);
             debugTekst = "";
-            viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())))
-            with(new CollidableComponent(true))
-            buildAndAttach(getGameWorld());
+            //viewFromNodeWithBBox(new Circle(15, Color.color(Math.random(), Math.random(), Math.random())));
+            //with(new CollidableComponent(true));
+            //buildAndAttach(getGameWorld());
+        }
+        return ".";
+
+    }
+}
