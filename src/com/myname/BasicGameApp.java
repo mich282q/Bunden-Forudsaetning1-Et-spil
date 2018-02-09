@@ -8,14 +8,14 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
-import javafx.scene.control.Alert;
+//import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import java.util.Map;
-import java.util.Random;
+//import java.util.Random;
 
 public class BasicGameApp extends GameApplication {
 
@@ -67,6 +67,7 @@ public class BasicGameApp extends GameApplication {
 
             }}}
 
+
     @Override
     protected void initPhysics() {
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.COIN) {
@@ -83,7 +84,8 @@ public class BasicGameApp extends GameApplication {
                 // opdaterer pointText
                 pointText.setText("Point: " + pointCounter);
 
-
+                // spiller collectcoin.wav når man samler den op
+                getAudioPlayer().playSound("collectcoin.wav");
             }
         });
     }

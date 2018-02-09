@@ -1,9 +1,5 @@
 package com.myname;
 
-import com.almasb.fxgl.entity.component.CollidableComponent;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-
 import java.util.Random;
 
 public class Coins {
