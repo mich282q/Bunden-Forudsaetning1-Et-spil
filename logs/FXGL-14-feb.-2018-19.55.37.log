@@ -1,0 +1,328 @@
+19:54:54.912 [JavaFX Application Thread] DEBUG GameApplication      - Logger initialized
+19:54:54.941 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+19:54:55.076 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 600.0 x 700.0
+19:54:55.076 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    600.0 x 700.0
+19:54:55.076 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+19:54:55.295 [JavaFX Application Thread] DEBUG GameApplication      - Starting FXGL
+19:54:55.418 [FXGL Launcher Thread     ] INFO  Version              - FXGL-0.4.2
+19:54:55.419 [FXGL Launcher Thread     ] INFO  Version              - Source code and latest versions at: https://github.com/AlmasB/FXGL
+19:54:55.419 [FXGL Launcher Thread     ] INFO  Version              -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+19:54:55.420 [FXGL Launcher Thread     ] DEBUG FXGL                 - Loading FXGL system data
+19:54:55.440 [FXGL Launcher Thread     ] DEBUG IOTask               - Executing task: readDataTask(system/fxgl.bundle)
+19:54:55.455 [FXGL Launcher Thread     ] DEBUG FS                   - Reading from: system\fxgl.bundle
+19:54:55.473 [FXGL Launcher Thread     ] DEBUG IOTask               - Task succeeded: readDataTask(system/fxgl.bundle)
+19:54:55.473 [FXGL Launcher Thread     ] DEBUG Bundle               - Logging bundle: FXGL
+19:54:55.475 [FXGL Launcher Thread     ] DEBUG Bundle               - FXGL.offline.timer.version.check=2018-02-14T19:15:29.603
+19:54:55.507 [FXGL Launcher Thread     ] DEBUG GameApplication      - FXGL started
+19:54:55.507 [FXGL Launcher Thread     ] DEBUG GameApplication      - Logging game settings
+Title: Basic Game App
+Version: 0.1
+Width: 600
+Height: 700
+Fullscreen: false
+Intro: false
+Menus: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class com.almasb.fxgl.scene.SceneFactory
+Dialog Factory: class com.almasb.fxgl.ui.FXGLDialogFactory
+UI Factory: class com.almasb.fxgl.ui.FXGLUIFactory
+Notification Service: class com.almasb.fxgl.gameplay.notification.XboxNotificationView
+Exception Handler: class com.almasb.fxgl.app.FXGLExceptionHandler
+19:54:55.510 [FXGL Launcher Thread     ] DEBUG GameApplication      - Configuring GameApplication
+19:54:55.510 [FXGL Launcher Thread     ] DEBUG GameApplication      - Initializing state machine and application states
+19:54:55.532 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+19:54:55.581 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+19:54:55.586 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+19:54:55.609 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/core/notification.wav
+19:54:55.720 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/select.wav
+19:54:55.723 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/back.wav
+19:54:55.726 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/sounds/menu/press.wav
+19:54:55.729 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/VarelaRound-Regular.ttf
+19:54:55.828 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/fonts/lucida_console.ttf
+19:54:55.834 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/css/fxgl_dark.css
+19:54:55.835 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/icons/fxgl_icon.png
+19:54:55.846 [FXGL Launcher Thread     ] DEBUG AssetLoader          - Loading from disk: /assets/ui/cursors/fxgl_default.png
+19:54:55.891 [FXGL Launcher Thread     ] DEBUG FXGL.GameScene       - Game scene initialized: 600x700
+19:54:55.904 [FXGL Launcher Thread     ] DEBUG FXGL.GameWorld       - Game world initialized
+19:54:55.985 [FXGL Launcher Thread     ] DEBUG FXGL.PhysicsWorld    - Physics world initialized: appHeight=700, physics.ppm=50,0
+19:54:56.009 [FXGL Launcher Thread     ] DEBUG Input                - Registered new binding: Pause - Esc
+19:54:56.024 [FXGL Launcher Thread     ] INFO  GameApplication      - Game configuration took:  0,515 sec
+19:54:56.026 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+19:54:56.055 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (6.0, 35.0)
+19:54:56.055 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 600.0 x 700.0
+19:54:56.055 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (1.0, 1.0)
+19:54:56.055 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 600.0 x 700.0
+19:54:56.055 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 606.0 x 735.0
+19:54:56.055 [JavaFX Application Thread] DEBUG GameApplication      - Running preInit()
+19:54:56.057 [JavaFX Application Thread] DEBUG AnnotationParser     - Main app package name: com.myname
+19:54:56.208 [JavaFX Application Thread] DEBUG AnnotationParser     - @SetAchievementStore: []
+19:54:56.209 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+19:54:56.210 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - CTRL+0
+19:54:56.210 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+19:54:56.210 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+19:54:56.210 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+19:54:56.211 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Up - W
+19:54:56.211 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Down - S
+19:54:56.211 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Play Sound - F
+19:54:56.224 [JavaFX Application Thread] DEBUG GameApplication      - Starting main loop
+19:54:56.226 [JavaFX Application Thread] DEBUG StartupState         - STARTUP
+19:54:56.226 [JavaFX Application Thread] DEBUG GameApplication      - Starting new game
+19:54:56.226 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+19:54:56.255 [JavaFX Application Thread] DEBUG AppStateMachine      - StartupState -> LoadingState
+19:54:56.257 [JavaFX Application Thread] DEBUG AnnotationParser     - Main app package name: com.myname
+19:54:56.257 [JavaFX Application Thread] DEBUG InitAppTask          - Parsing annotations
+19:54:56.309 [JavaFX Application Thread] DEBUG AnnotationParser     - @SetEntityFactory: []
+19:54:56.309 [JavaFX Application Thread] DEBUG AnnotationParser     - @SetEventHandler: []
+19:54:56.309 [JavaFX Application Thread] DEBUG AnnotationParser     - @AddCollisionHandler: []
+19:54:56.317 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Clearing previous game
+19:54:56.317 [FXGL Background Thread 1 ] DEBUG FXGL.GameWorld       - Clearing game world
+19:54:56.317 [FXGL Background Thread 1 ] DEBUG FXGL.PhysicsWorld    - Clearing physics world
+19:54:56.317 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Clearing game scene
+19:54:56.319 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Assets
+19:54:56.320 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Game
+19:54:56.367 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from disk: /assets/textures/brick.png
+19:54:56.379 [FXGL Background Thread 1 ] DEBUG FXGL.GameScene       - Creating render group for layer: TOP(2147483647)
+19:54:56.527 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing Physics
+19:54:56.528 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initializing UI
+19:54:56.528 [FXGL Background Thread 1 ] DEBUG AssetLoader          - Loading from cache: /assets/textures/brick.png
+19:54:56.738 [FXGL Background Thread 1 ] DEBUG InitAppTask          - Initialization Complete
+19:54:56.738 [FXGL Background Thread 1 ] INFO  InitAppTask          - Game initialization took: 0,422 sec
+19:54:56.748 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+19:54:56.761 [JavaFX Application Thread] DEBUG AppStateMachine      - LoadingState -> PlayState
+19:55:03.855 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from disk: /assets/sounds/collectcoin.wav
+19:55:03.890 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.092 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.092 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.300 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.300 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.541 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.541 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.717 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.717 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.748 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.748 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.972 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:04.972 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.164 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.164 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.388 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.388 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.452 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.453 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.692 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.692 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:05.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.125 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.125 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.268 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.268 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.492 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.492 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.700 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.701 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:06.940 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.149 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.150 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.372 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.372 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.597 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.597 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.692 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.692 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.820 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.820 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:07.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:08.540 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.245 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.325 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.548 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.548 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:09.772 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.117 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.117 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.340 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.341 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.564 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.565 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.948 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:11.948 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.140 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.188 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.189 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.396 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.495 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.700 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.700 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.876 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.877 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.923 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:12.924 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:13.100 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:13.101 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:13.405 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:13.631 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:13.632 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:14.620 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:14.620 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:14.844 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.052 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.292 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.500 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.724 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.724 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.948 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:15.948 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.172 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.172 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.381 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.620 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.621 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.828 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:16.828 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:17.036 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:17.036 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:17.788 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:18.109 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:18.110 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:18.220 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:18.444 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.245 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.246 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.404 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.612 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.612 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.708 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.709 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:19.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.076 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.076 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.140 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.140 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.364 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.364 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.508 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.509 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.587 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.588 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.972 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:20.973 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.180 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.404 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.468 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.627 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.628 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.676 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.676 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.851 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.852 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:21.916 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.142 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.143 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.348 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.349 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.587 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.588 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.748 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.748 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:22.972 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:23.243 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:23.997 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:23.997 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:24.220 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:24.508 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:24.509 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:25.660 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:25.661 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:25.677 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:25.678 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:25.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:25.900 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:26.108 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:26.908 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:26.988 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:26.989 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.196 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.196 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.324 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.420 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.420 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.643 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.644 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.867 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:27.868 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:28.076 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:28.076 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:28.091 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:28.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:28.796 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.019 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.020 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.212 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.213 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.452 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.453 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.660 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:29.883 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.108 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.300 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.301 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.333 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.333 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.509 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.509 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.733 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.876 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.957 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:30.957 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.115 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.116 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.355 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.356 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.419 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.420 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.564 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.564 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.627 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.628 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.804 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.805 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:31.835 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.173 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.177 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.412 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.412 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.635 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.636 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.715 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.716 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.923 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:32.924 [JavaFX Application Thread] DEBUG AssetLoader          - Loading from cache: /assets/sounds/collectcoin.wav
+19:55:37.946 [JavaFX Application Thread] DEBUG GameApplication      - Exiting game application
+19:55:37.950 [JavaFX Application Thread] DEBUG GameApplication      - Shutting down background threads
+19:55:37.951 [JavaFX Application Thread] DEBUG GameApplication      - Exiting FXGL
+19:55:37.951 [JavaFX Application Thread] DEBUG FXGL                 - Saving FXGL system data
+19:55:37.957 [JavaFX Application Thread] DEBUG IOTask               - Executing task: writeDataTask(system/fxgl.bundle)
+19:55:37.971 [JavaFX Application Thread] DEBUG FS                   - Writing to: system\fxgl.bundle
+19:55:37.986 [JavaFX Application Thread] DEBUG IOTask               - Task succeeded: writeDataTask(system/fxgl.bundle)
+19:55:37.987 [JavaFX Application Thread] DEBUG GameApplication      - Closing logger and exiting JavaFX
