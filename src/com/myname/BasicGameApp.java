@@ -28,7 +28,26 @@ public class BasicGameApp extends GameApplication {
         settings.setHeight(700);
         settings.setTitle("Basic Game App");
         settings.setVersion("0.1");
+    }
 
+    public enum EntityType {
+        PLAYER, COIN, WALL
+
+    }
+
+    private Entity player;
+    private int pointCounter = 0; // laver en int variabel til vores point tæller
+
+    //hvor player skal være i boksen
+    @Override
+    protected void initGame() {
+        player = Entities.builder()
+                .type(EntityType.PLAYER)
+                .at(440, 600)
+                //.viewFromNode(new Rectangle(25, 25, Color.BLUE))
+                .viewFromTextureWithBBox("brick.png")
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
         Entities.builder()
                 .type(EntityType.WALL)
                 .at(-5, 0)
@@ -56,26 +75,7 @@ public class BasicGameApp extends GameApplication {
                 .viewFromNodeWithBBox(new Rectangle(600, 5, Color.BLACK))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
-    }
 
-    public enum EntityType {
-        PLAYER, COIN,WALL
-
-    }
-
-    private Entity player;
-    private int pointCounter = 0; // laver en int variabel til vores point tæller
-
-    //hvor player skal være i boksen
-    @Override
-    protected void initGame() {
-        player = Entities.builder()
-                .type(EntityType.PLAYER)
-                .at(440, 600)
-                //.viewFromNode(new Rectangle(25, 25, Color.BLUE))
-                .viewFromTextureWithBBox("brick.png")
-                .with(new CollidableComponent(true))
-                .buildAndAttach(getGameWorld());
 
 
         // de forskellige COIN som er i spillet
@@ -125,11 +125,10 @@ public class BasicGameApp extends GameApplication {
                 }
 
             }
-// laver en pop-up boks med en besked når man når til slutningen af spillet
+
 
 
         });
-
         // Håndtere kolisioner mellem en Player type og Wall type
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.WALL) {
             @Override
