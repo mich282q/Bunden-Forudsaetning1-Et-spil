@@ -9,6 +9,7 @@ import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
 //import javafx.scene.control.Alert;
+import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -78,6 +79,7 @@ public class BasicGameApp extends GameApplication {
                 coin.removeFromWorld();
 
 
+
                 // tilføjer 50 point til pointCounter
                 pointCounter = pointCounter + 50;
 
@@ -89,7 +91,10 @@ public class BasicGameApp extends GameApplication {
                 getAudioPlayer().playSound("collectcoin.wav");
 
 
+
             }
+// laver en pop-up boks med en besked når man når til slutningen af spillet
+
 
         });
     }
@@ -157,6 +162,9 @@ public class BasicGameApp extends GameApplication {
         //getGameScene().addUINode(brickTexture);
        textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
         getGameScene().addUINode(pointText);
+
+        
+
     }
 
 
