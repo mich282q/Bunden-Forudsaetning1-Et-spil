@@ -90,7 +90,13 @@ public class BasicGameApp extends GameApplication {
                 // spiller collectcoin.wav når man samler den op
                 getAudioPlayer().playSound("collectcoin.wav");
 
-
+                if (pointCounter == 11250)  {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setTitle("Tillykke!");
+                    alert.setHeaderText("Du har gennemført vores spil!");
+                    alert.setContentText("Du fik " + pointCounter + " point!");
+                    alert.show();
+                }
 
             }
 // laver en pop-up boks med en besked når man når til slutningen af spillet
