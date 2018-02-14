@@ -13,6 +13,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import java.util.Map;
@@ -33,7 +34,7 @@ public class BasicGameApp extends GameApplication {
     }
 
     public enum EntityType {
-        PLAYER, COIN
+        PLAYER, COIN, WALL
 
     }
 
@@ -51,6 +52,33 @@ public class BasicGameApp extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
+                Entities.builder()
+                .type(EntityType.WALL)
+                .at(-5, 0)
+                .viewFromNodeWithBBox(new Rectangle(5, 700, Color.BLACK))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+
+                Entities.builder()
+                .type(EntityType.WALL)
+                .at(0, -5)
+                .viewFromNodeWithBBox(new Rectangle(600, 5, Color.BLACK))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+
+                Entities.builder()
+                .type(EntityType.WALL)
+                .at(600, 0)
+                .viewFromNodeWithBBox(new Rectangle(5, 700, Color.BLACK))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+
+                Entities.builder()
+                .type(EntityType.WALL)
+                .at(0, 700)
+                .viewFromNodeWithBBox(new Rectangle(600, 5, Color.BLACK))
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
 
         // de forskellige COIN som er i spillet
         /* Et loop i et andet loop, tegner et antal mønter på spillepladen med tilfældige farver */
@@ -90,6 +118,8 @@ public class BasicGameApp extends GameApplication {
                 // spiller collectcoin.wav når man samler den op
                 getAudioPlayer().playSound("collectcoin.wav");
 
+
+                // laver en pop-up boks med en besked når man når til slutningen af spillet
                 if (pointCounter == 11250)  {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setTitle("Tillykke!");
@@ -99,9 +129,29 @@ public class BasicGameApp extends GameApplication {
                 }
 
             }
-// laver en pop-up boks med en besked når man når til slutningen af spillet
 
 
+
+        });
+
+        // Håndtere kolisioner mellem en Player type og Wall type
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.WALL) {
+            @Override
+            protected void onCollision(Entity player, Entity wall) {
+                // følgende if sætninger gør at man ikke kan gå igennem væggene
+                if (getInput().isHeld(KeyCode.D)) {
+                    player.translateX(-3);
+                }
+                if (getInput().isHeld(KeyCode.A)) {
+                    player.translateX(3);
+                }
+                if (getInput().isHeld(KeyCode.W)) {
+                    player.translateY(3);
+                }
+                if (getInput().isHeld(KeyCode.S)) {
+                    player.translateY(-3);
+                }
+            }
         });
     }
 
